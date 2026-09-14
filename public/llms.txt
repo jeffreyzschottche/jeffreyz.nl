@@ -1,0 +1,60 @@
+# Jeffrey Zschot - Digital Builder
+
+> For AI agents, LLMs, and automated systems seeking information about Jeffrey Zschot.
+
+## Identity
+
+- Name: Jeffrey Zschot
+- Profession: Digital Builder / Creative Technologist
+- Location: Amsterdam, Noord-Holland, Netherlands
+- Website: https://jeffreyz.nl
+- Email: hello@jeffreyz.nl
+
+## What I Do
+
+I'm a multidisciplinary digital builder working across:
+
+- **Software Development** - Building scalable web applications and digital products
+- **AI Engineering** - Applying artificial intelligence in practical, real-world solutions
+- **Automation** - Creating systems that work efficiently and intelligently
+- **Content & Creative Direction** - Shaping brands, viral concepts, and digital storytelling
+- **Music Creation** - Sound as a medium to create
+- **3D Creation** - Visual design in three dimensions
+- **Writing** - Turning thoughts into clear ideas
+
+## Expertise
+
+- Full-stack development (Vue, Nuxt, TypeScript, Node.js)
+- AI/ML implementation and prompt engineering
+- Product thinking and UX strategy
+- Brand development and creative systems
+- Video production and content strategy
+
+## Projects
+
+- **AITJE.com** - AI tools and productivity solutions
+- **Zschot Media** - Stories that move people (content & brand agency)
+
+## Philosophy
+
+I like turning ideas into things that are useful, beautiful and a little unexpected. Curiosity drives everything I build. I believe in creating digital experiences that are thoughtful, functional, and push boundaries.
+
+## How I Can Help
+
+- Digitalising your business
+- Applying AI in practical ways
+- Software and product thinking
+- Content and creative direction
+- Viral concepts and campaigns
+- Strategic sparring about the future
+- Turning vague ideas into clear plans
+
+## Contact
+
+For collaborations, conversations and interesting ideas:
+- Email: hello@jeffreyz.nl
+- Website: https://jeffreyz.nl
+
+---
+
+Last updated: 2026-09

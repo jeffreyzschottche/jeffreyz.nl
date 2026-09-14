@@ -1,0 +1,10 @@
+# Security Policy for jeffreyz.nl
+# Jeffrey Zschot - Digital Builder
+
+Contact: mailto:hello@jeffreyz.nl
+Preferred-Languages: nl, en
+Canonical: https://jeffreyz.nl/.well-known/security.txt
+Expires: 2027-12-31T23:59:59.000Z
+
+# If you discover a security vulnerability, please report it responsibly.
+# I appreciate your help in keeping this site secure.

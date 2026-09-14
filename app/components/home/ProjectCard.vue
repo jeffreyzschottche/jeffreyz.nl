@@ -1,9 +1,10 @@
 <script setup lang="ts">
 defineProps<{ project: { name: string; kind: string; category: string; tagline: string; details: string }; index: number }>()
+defineEmits<{ select: [project: { name: string; kind: string; category: string; tagline: string; details: string }] }>()
 </script>
 
 <template>
-  <a href="#contact" class="project-card" :class="project.kind" :aria-label="`Get in touch about ${project.name.replace('\n', ' ')}`">
+  <a href="#contact" class="project-card" @click.prevent="$emit('select', project)" :class="project.kind" :aria-label="`Get in touch about ${project.name.replace('\n', ' ')}`">
     <HomeProjectTexture :kind="project.kind" />
     <div class="card-top"><span class="project-index">{{ String(index + 1).padStart(2, '0') }} <i /></span><span>{{ project.category }}</span></div>
     <div class="project-identity">

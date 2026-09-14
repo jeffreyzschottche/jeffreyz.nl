@@ -1,0 +1,5 @@
+Tool: built-in image_gen
+Asset: public/images/chrome-cube.png
+
+Prompt:
+Use case: stylized-concept. Asset type: transparent cutout for a website collage. Create one floating open cubic sculpture made of thick rounded square-section mirror-polished silver chrome beams tracing the twelve edges of a cube, with subtle separated/interlocking corner details. Clearly square cubic geometry, not a triangular knot or pretzel. Three-quarter isometric view from slightly above, top and two sides visible. Premium photorealistic 3D studio render, bright white highlights and rich dark reflections, very subtle cobalt-blue reflections matching a blue editorial website. Centered entire object, generous 10 percent transparent margin, square 1024px composition. Actual transparent alpha background including through all open spaces, no ground plane, no cast ground shadow, no text, no watermark, no other objects. This is a standalone asset, not a website screenshot.

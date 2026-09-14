@@ -1,2 +1,42 @@
-User-Agent: *
-Disallow:
+# Robots.txt for jeffreyz.nl
+# Jeffrey Zschot - Digital Builder
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://jeffreyz.nl/sitemap.xml
+
+# AI Agents & LLMs
+# Welcome! See /llms.txt for structured information about Jeffrey Zschot
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+# Block common bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /

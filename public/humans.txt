@@ -1,0 +1,21 @@
+/* TEAM */
+Developer & Designer: Jeffrey Zschot
+Role: Digital Builder
+Location: Amsterdam, Noord-Holland, Netherlands
+Contact: hello@jeffreyz.nl
+Website: https://jeffreyz.nl
+
+/* THANKS */
+Built with curiosity and coffee.
+
+/* SITE */
+Standards: HTML5, CSS3, ES6+
+Framework: Nuxt 3 (Vue.js)
+Styling: Custom CSS with GSAP animations
+Fonts: Playfair Display, System fonts
+Icons: Simple Icons, Custom SVG
+Hosting: Vercel
+
+/* PHILOSOPHY */
+Ideas. People. Systems. A brighter tomorrow.
+Turning curiosity into real work.

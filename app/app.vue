@@ -1,5 +1,6 @@
 <template>
   <div>
+    <SchemaOrg />
     <NuxtRouteAnnouncer />
     <NuxtPage />
   </div>
