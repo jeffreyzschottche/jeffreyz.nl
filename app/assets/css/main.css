@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
 
 :root{font-family:'DM Sans',sans-serif;color:#222629;background:#fff;font-synthesis:none;color-scheme:light;scroll-behavior:smooth}
-*{box-sizing:border-box}body{margin:0}button,a{-webkit-tap-highlight-color:transparent}button{font:inherit}a{color:inherit;text-decoration:none}button:focus-visible,a:focus-visible{outline:2px solid #ffb94c;outline-offset:6px}button{cursor:pointer}::selection{background:#f4e895;color:#1736ed}img{display:block;max-width:100%}button{color:inherit}html,body{overflow-x:clip}button svg,a svg{width:1.3em;height:1.3em}svg{fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+*{box-sizing:border-box}html,body{margin:0;max-width:100%;width:100%;overflow-x:clip}button,a{-webkit-tap-highlight-color:transparent}button{font:inherit}a{color:inherit;text-decoration:none}button:focus-visible,a:focus-visible{outline:2px solid #ffb94c;outline-offset:6px}button{cursor:pointer}::selection{background:#f4e895;color:#1736ed}img{display:block;max-width:100%}button{color:inherit}button svg,a svg{width:1.3em;height:1.3em}svg{fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
 @media(prefers-reduced-motion:reduce){:root{scroll-behavior:auto}}

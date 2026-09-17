@@ -2,11 +2,12 @@
 Developer & Designer: Jeffrey Zschot
 Role: Digital Builder
 Location: Amsterdam, Noord-Holland, Netherlands
-Contact: hello@jeffreyz.nl
+Contact: jeffreyzschot@gmail.com
 Website: https://jeffreyz.nl
 
 /* THANKS */
 Built with curiosity and coffee.
+Service artwork credits and licenses: /images/services/CREDITS.md
 
 /* SITE */
 Standards: HTML5, CSS3, ES6+

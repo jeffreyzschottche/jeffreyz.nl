@@ -2,6 +2,7 @@
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
+const { t } = useI18n()
 useSeoMeta({ title: 'Jeffreyz — Digital builder', description: 'Ideas, people, systems. Jeffrey builds digital experiences with curiosity and a different perspective.', themeColor: '#173df5' })
 
 const page = ref<HTMLElement>()
@@ -39,7 +40,7 @@ onBeforeUnmount(() => media?.revert())
     <HomeNextStep />
     <HomeMagazine />
     <HomeFinalNotes />
-    <footer><a class="footer-logo" href="#home">jeffreyz<span>©</span></a><span class="footer-tagline">Stay curious.</span><a class="footer-top" href="#home">Back to top ↑</a></footer>
+    <footer><a class="footer-logo" href="#home">jeffreyz<span>©</span></a><span class="footer-tagline">{{ t('footer.tagline') }}</span><a class="footer-top" href="#home">{{ t('footer.backToTop') }} ↑</a></footer>
   </main>
 </template>
 
@@ -81,9 +82,9 @@ onBeforeUnmount(() => media?.revert())
   background:transparent;
 }
 .home-page :deep(.story-copy){line-height:1.65}
-.home-page :deep(.final-notes){padding-block:var(--section-space);background:transparent}
+.home-page :deep(.final-notes){padding-top:var(--section-space);padding-bottom:calc(var(--section-space) * .35);background:transparent}
 .home-page :deep(.notes-prose){line-height:1.55}
-footer{position:relative;margin-top:64px;border-top:8px solid #0647ff}
+footer{position:relative;margin-top:42px;border-top:8px solid #0647ff}
 footer::before{display:none}
 @media(max-width:700px){
   .home-page{--section-space:clamp(72px,16vw,108px)}
@@ -94,5 +95,5 @@ footer::before{display:none}
   .home-page :deep(.next-help){padding-top:32px}
   .home-page :deep(.final-notes){gap:48px}
 }
-footer{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:40px 6%;font-size:13px;background:#0647ff;color:#fff}footer a{color:#fff;transition:color .2s,opacity .2s}footer a:hover{color:#dfe7ff;opacity:.9}.footer-logo{font-size:26px;font-weight:700;letter-spacing:-1.5px}.footer-logo span{font-size:16px;vertical-align:top;margin-left:4px}.footer-tagline{font-size:24px;font-weight:600;letter-spacing:-.5px}.footer-top{font-size:24px;font-weight:600;letter-spacing:-.5px}@media(max-width:650px){footer{flex-wrap:wrap;gap:16px}.footer-tagline,.footer-top{font-size:18px}}
+footer{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:40px 6%;font-size:13px;background:#0647ff;color:#fff}footer a{color:#fff;transition:color .2s,opacity .2s}footer a:hover{color:#dfe7ff;opacity:.9}.footer-logo{font-size:26px;font-weight:700;letter-spacing:-1.5px}.footer-logo span{font-size:16px;vertical-align:top;margin-left:4px}.footer-tagline{font-size:17px;font-weight:600;letter-spacing:-.5px}.footer-top{font-size:17px;font-weight:600;letter-spacing:-.5px}@media(max-width:650px){footer{flex-wrap:wrap;gap:16px}.footer-tagline,.footer-top{font-size:18px}}
 </style>

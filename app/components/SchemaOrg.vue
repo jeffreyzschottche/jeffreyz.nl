@@ -10,8 +10,8 @@ const structuredData = {
       givenName: 'Jeffrey',
       familyName: 'Zschot',
       url: 'https://jeffreyz.nl',
-      email: 'hello@jeffreyz.nl',
-      image: 'https://jeffreyz.nl/images/portrait.webp',
+      email: 'jeffreyzschot@gmail.com',
+      image: 'https://jeffreyz.nl/images/image-jz.png',
       description: 'Digital builder uit Amsterdam. Expertise in software development, AI engineering, automation, content creation en creative direction.',
       jobTitle: 'Digital Builder',
       worksFor: [
@@ -46,11 +46,11 @@ const structuredData = {
         'Product Strategy'
       ],
       sameAs: [
-        'https://www.linkedin.com/in/jeffreyzschot',
-        'https://www.instagram.com/jeffreyzschot',
-        'https://www.tiktok.com/@jeffreyzschot',
+        'https://www.linkedin.com/in/jeffrey-zschöttche-71aa95151',
+        'https://instagram.com/jeffreyz.nl',
+        'https://www.tiktok.com/@jeffreyz.nl',
         'https://aitje.com',
-        'https://zschotmedia.com'
+        'https://zschotmedia.nl'
       ],
       address: {
         '@type': 'PostalAddress',
@@ -97,9 +97,9 @@ const structuredData = {
       '@id': 'https://jeffreyz.nl/#business',
       name: 'Jeffrey Zschot - Digital Builder',
       url: 'https://jeffreyz.nl',
-      email: 'hello@jeffreyz.nl',
+      email: 'jeffreyzschot@gmail.com',
       description: 'Digital builder services: software development, AI engineering, automation, content creation, creative direction.',
-      image: 'https://jeffreyz.nl/images/portrait.webp',
+      image: 'https://jeffreyz.nl/images/image-jz.png',
       founder: { '@id': 'https://jeffreyz.nl/#person' },
       address: {
         '@type': 'PostalAddress',

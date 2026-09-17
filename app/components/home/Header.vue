@@ -1,14 +1,21 @@
 <script setup lang="ts">
+const { t } = useI18n()
 const menuOpen = ref(false)
 const scrolled = ref(false)
 const activeSection = ref('home')
-const links = [{ label: 'Start', href: '#home', id: 'home' }, { label: 'What I do', href: '#about', id: 'about' }, { label: 'Working on', href: '#projects', id: 'projects' }, { label: 'When', href: '#contact', id: 'contact' }, { label: 'Why', href: '#why', id: 'why' }]
+const links = computed(() => [
+  { label: t('nav.start'), href: '#home', id: 'home' },
+  { label: t('nav.whatIDo'), href: '#about', id: 'about' },
+  { label: t('nav.workingOn'), href: '#projects', id: 'projects' },
+  { label: t('nav.when'), href: '#contact', id: 'contact' },
+  { label: t('nav.why'), href: '#why', id: 'why' },
+])
 
 onMounted(() => {
   const onScroll = () => {
     scrolled.value = window.scrollY > 50
     // Scroll spy - find which section is currently in view
-    const allSections = [...links.map(l => l.id), 'tldr']
+    const allSections = [...links.value.map(l => l.id), 'tldr']
     const sections = allSections.map(id => document.getElementById(id)).filter(Boolean) as HTMLElement[]
     const viewportMiddle = window.scrollY + window.innerHeight * 0.4
 
@@ -37,7 +44,7 @@ onMounted(() => {
       <a class="header-cta" href="#tldr">TL;DR <span>↓</span></a>
     </div>
     <HomeLanguageToggle class="lang-mobile" />
-    <button class="menu-toggle" :aria-expanded="menuOpen" aria-controls="mobile-menu" :aria-label="menuOpen ? 'Close menu' : 'Open menu'" @click="menuOpen = !menuOpen"><span>/ {{ menuOpen ? 'CLOSE' : 'MENU' }}</span><svg viewBox="0 0 24 24"><path :d="menuOpen ? 'M5 5l14 14M19 5L5 19' : 'M3 7h18M3 12h18M3 17h18'" /></svg></button>
+    <button class="menu-toggle" :aria-expanded="menuOpen" aria-controls="mobile-menu" :aria-label="menuOpen ? 'Close menu' : 'Open menu'" @click="menuOpen = !menuOpen"><span>/ {{ menuOpen ? t('nav.close') : t('nav.menu') }}</span><svg viewBox="0 0 24 24"><path :d="menuOpen ? 'M5 5l14 14M19 5L5 19' : 'M3 7h18M3 12h18M3 17h18'" /></svg></button>
     <nav v-if="menuOpen" id="mobile-menu" class="mobile-nav" aria-label="Mobile navigation" @keydown.esc="menuOpen = false"><a v-for="link in links" :key="link.href" :href="link.href" :class="{ active: activeSection === link.id }" @click="menuOpen = false">{{ link.label }} <span>↗</span></a><a href="#tldr" class="mobile-nav-cta" @click="menuOpen = false">TL;DR ↓</a></nav>
   </header>
 </template>
@@ -54,10 +61,10 @@ onMounted(() => {
 .logo{font-size:35px;font-weight:700;color:white;letter-spacing:-2px;line-height:1}
 .logo span{font-size:16px;letter-spacing:0;vertical-align:top;margin-left:5px}
 
-.lang-center{position:absolute;left:49%;transform:translateX(-50%);z-index:5}
+.lang-center{position:absolute;left:46%;transform:translateX(-50%);z-index:5}
 .lang-mobile{display:none}
 
-.nav-pill{display:flex;align-items:center;gap:6px;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-radius:50px;padding:6px 6px 6px 12px;margin-left:auto;margin-right:1%}
+.nav-pill{display:flex;align-items:center;gap:6px;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-radius:50px;padding:6px 6px 6px 18px;margin-left:auto;margin-right:1%}
 .desktop-nav{display:flex;gap:2px}
 .desktop-nav a{position:relative;font-size:13px;font-weight:500;padding:8px 14px;border-radius:20px;color:#1a1a2e;transition:all .2s;text-align:center}
 .desktop-nav a:before{content:'';position:absolute;width:4px;height:4px;background:transparent;border-radius:50%;left:6px;top:50%;transform:translateY(-50%);transition:background .2s}
@@ -79,8 +86,7 @@ onMounted(() => {
 .mobile-nav-cta{display:block;margin-top:20px;background:#ff3333;color:white;text-align:center;padding:14px;border-radius:30px;font-size:13px;font-weight:600;letter-spacing:.05em}
 
 @media(max-width:1100px){.nav-pill{gap:4px;padding:5px}.desktop-nav a{padding:10px 12px;font-size:13px}.desktop-nav a.active{padding-left:20px}.header-cta{padding:10px 16px}}
-@media(max-width:900px){.nav-pill{display:none}}
-@media(max-width:650px){
+@media(max-width:900px){
   .site-header{height:90px;padding:0 7%;justify-content:space-between;gap:0}
   .site-header.scrolled{height:90px;padding:0 7%;background:transparent;border-radius:0;margin:0;width:100%}
   .past-hero .logo{color:#1a3fe0}

@@ -2,18 +2,10 @@
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
+const { t } = useI18n()
 const section = ref<HTMLElement>()
 const connect = ref<HTMLAnchorElement>()
-const waysToHelp = [
-  'Digitalising your business',
-  'Applying AI in practical ways',
-  'Software and product thinking',
-  'Content and creative direction',
-  'Viral concepts and campaigns',
-  'Strategic sparring about the future',
-  'Turning vague ideas into clear plans',
-  'Working with an engineer who’s in the middle of it',
-]
+const waysToHelp = computed(() => t('nextStep.helpItems') as unknown as string[])
 let media: gsap.MatchMedia | undefined
 
 onMounted(() => {
@@ -51,14 +43,14 @@ onBeforeUnmount(() => media?.revert())
   <section id="contact" ref="section" class="next-section" aria-labelledby="next-heading">
     <div id="thoughts" class="next-panel">
       <div class="next-story">
-        <p class="section-label next-reveal">04 <span>/</span> What’s next</p>
-        <h2 id="next-heading" class="next-reveal">Always looking<br>for the next step<span class="blue-period">.</span></h2>
-        <div class="story-copy next-reveal"><p>I know a lot, and I know there’s still a lot more to learn.<br class="wide-break"> That balance keeps me curious, sharp and open to what’s next.</p><p>If you’re thinking about the digital future of your business, applying AI in a practical way, improving your content, exploring new ideas, or simply looking for someone technical to spar with — I’d love to hear from you.</p></div>
+        <p class="section-label next-reveal">03 <span>/</span> {{ t('nextStep.label') }}</p>
+        <h2 id="next-heading" class="next-reveal">{{ t('nextStep.title') }}<br>{{ t('nextStep.titleLine2') }}<span class="blue-period">.</span></h2>
+        <div class="story-copy next-reveal"><p>{{ t('nextStep.story1') }}</p><p>{{ t('nextStep.story2') }}</p></div>
       </div>
       <div class="next-help">
-        <div class="next-reveal"><h3>How I can help</h3><ul><li v-for="way in waysToHelp" :key="way">{{ way }}</li></ul></div>
-        <div class="connect-block next-reveal"><span class="blue-rule" aria-hidden="true"/><p>Open to collaborations, conversations and interesting ideas.</p><a ref="connect" class="connect-cta" href="mailto:hello@jeffreyz.nl"><span class="cta-spark" aria-hidden="true">✳</span><span class="cta-label">Let’s connect</span><span class="cta-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></span></a></div>
-        <p class="closing-note next-reveal"><span aria-hidden="true"/>I can help you think, build and move forward.</p>
+        <div class="next-reveal"><h3>{{ t('nextStep.helpTitle') }}</h3><ul><li v-for="way in waysToHelp" :key="way">{{ way }}</li></ul></div>
+        <div class="connect-block next-reveal"><span class="blue-rule" aria-hidden="true"/><p>{{ t('nextStep.connectIntro') }}</p></div>
+        <p class="closing-note next-reveal"><span aria-hidden="true"/>{{ t('nextStep.closingNote') }}</p>
       </div>
       <HomeSwissShapes />
     </div>
@@ -66,29 +58,29 @@ onBeforeUnmount(() => media?.revert())
 </template>
 
 <style scoped>
-.next-section{padding:35px 3.2% 50px;background:#fff;color:#090a0c;scroll-margin-top:20px}
-.next-panel{position:relative;isolation:isolate;display:grid;grid-template-columns:1.28fr 1fr;gap:4.5%;border:1px solid #d8dde4;border-radius:12px;padding:52px 5.1% 58px;background:linear-gradient(125deg,#fff 65%,#f9faff);scroll-margin-top:30px}
+.next-section{padding:25px 3.2% 35px;background:#fff;color:#090a0c;scroll-margin-top:20px}
+.next-panel{position:relative;isolation:isolate;display:grid;grid-template-columns:1.28fr 1fr;gap:4.5%;border:1px solid #d8dde4;border-radius:12px;padding:38px 5.1% 42px;background:linear-gradient(125deg,#fff 65%,#f9faff);scroll-margin-top:30px}
 .next-story,.next-help{position:relative;z-index:2;min-width:0}
-.section-label{display:flex;align-items:center;gap:12px;margin:0 0 28px;color:#687286;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.24em}
-h2{font-family:'Playfair Display',Georgia,serif;font-weight:500;font-size:clamp(42px,5.55vw,88px);line-height:1.02;letter-spacing:-.065em;margin:0 0 26px;white-space:nowrap}
+.section-label{display:flex;align-items:center;gap:15px;margin:0 0 28px;color:#2453ff;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.25em}
+h2{font-weight:700;font-size:clamp(48px,6vw,96px);line-height:.99;letter-spacing:-.05em;margin:0 0 26px}
 .blue-period{color:#0647ff}
-.story-copy{max-width:510px;color:#606b7e;font-size:clamp(14px,1.4vw,20px);line-height:1.45;letter-spacing:-.02em}
+.story-copy{max-width:510px;color:#454453;font-size:18px;line-height:1.5;letter-spacing:-.02em}
 .story-copy p{margin:0 0 24px}.story-copy p:last-child{margin-bottom:0}
 .next-help{border-left:1px solid #d8dde4;padding:7px 0 0 10%}
 h3{font-size:19px;line-height:1.2;letter-spacing:-.04em;font-weight:700;margin:0 0 17px}
 ul{list-style:none;margin:0;padding:0;display:grid;gap:7px}
-li{position:relative;padding-left:25px;font-size:clamp(12px,1.12vw,16px);line-height:1.35;color:#606b7e;letter-spacing:-.02em}
+li{position:relative;padding-left:25px;font-size:18px;line-height:1.5;color:#454453;letter-spacing:-.02em}
 li:before{content:'';position:absolute;left:1px;top:.43em;width:7px;height:7px;background:#0647ff;border-radius:50%;box-shadow:0 0 0 3px #0647ff05}
 .connect-block{margin-top:30px}.blue-rule{display:block;width:35px;height:2px;background:#0647ff;margin-bottom:18px}
-.connect-block>p{font-size:clamp(13px,1.15vw,16px);color:#606b7e;line-height:1.45;margin:0 0 16px;letter-spacing:-.02em}
+.connect-block>p{font-size:18px;color:#454453;line-height:1.5;margin:0 0 16px;letter-spacing:-.02em}
 .connect-cta{position:relative;display:inline-flex;align-items:center;gap:13px;min-width:218px;padding:7px 8px 7px 20px;border:1px solid #0847ff;border-radius:50px;background:linear-gradient(110deg,#064dff,#0738ed);color:white;box-shadow:0 5px 15px #1649ff18;transition:box-shadow .25s,background .25s}
 .cta-label{font-size:14px;font-weight:600}.cta-spark{font-size:22px;line-height:1;transition:transform .5s}.cta-arrow{display:grid;place-items:center;margin-left:auto;width:36px;height:36px;border-radius:50%;background:#ffffff20;transition:background .25s,color .25s}
 .cta-arrow svg{width:20px;height:20px;transition:transform .25s}.connect-cta:hover{box-shadow:0 8px 25px #1649ff35}.connect-cta:hover .cta-arrow{background:white;color:#0647ff}.connect-cta:hover .cta-arrow svg{transform:rotate(-35deg)}.connect-cta:hover .cta-spark{transform:rotate(90deg)}
 .connect-cta:focus-visible{outline:3px solid #8dabff;outline-offset:5px}
-.closing-note{display:flex;align-items:center;gap:18px;margin:30px 0 0;font-size:10px;letter-spacing:.06em;line-height:1.5;color:#778193}
+.closing-note{display:flex;align-items:center;gap:18px;margin:30px 0 0;font-size:18px;letter-spacing:-.02em;line-height:1.5;color:#454453}
 .closing-note>span{width:24px;height:1px;background:#738096;flex-shrink:0}
 @media(min-width:1700px){.next-panel{padding-top:65px;padding-bottom:70px}.story-copy{max-width:620px}}
-@media(min-width:701px) and (max-width:1050px){.next-panel{padding:38px 4%;gap:4%;grid-template-columns:1.15fr 1fr}h2{font-size:5.1vw}.section-label{font-size:8px;margin-bottom:23px}.story-copy{font-size:14px}.next-help{padding-left:8%}h3{font-size:17px}li{font-size:12px;padding-left:20px}ul{gap:6px}.wide-break{display:none}.closing-note{font-size:8px;gap:12px}.connect-cta{min-width:190px}}
-@media(max-width:700px){.next-section{padding:20px 5% 35px}.next-panel{grid-template-columns:1fr;gap:28px;padding:30px 7% 27px}.section-label{font-size:8px;margin-bottom:23px}h2{font-size:clamp(32px,6.9vw,48px);margin-bottom:21px}.story-copy{font-size:14px;line-height:1.5}.story-copy p{margin-bottom:20px}.wide-break{display:none}.next-help{border-left:0;padding:21px 0 0;border-top:1px solid #d8dde4}h3{font-size:17px;margin-bottom:14px}li{font-size:13px;padding-left:20px}ul{gap:7px}li:before{width:6px;height:6px}.connect-block{margin-top:24px}.connect-block>p{font-size:13px}.blue-rule{margin-bottom:15px}.connect-cta{display:flex;width:100%;justify-content:center;min-width:0}.cta-label{margin-left:auto}.cta-spark{position:absolute;left:19px}.cta-arrow{margin-left:auto}.closing-note{font-size:9px;gap:13px;margin-top:23px}}
+@media(min-width:701px) and (max-width:1050px){.next-panel{padding:38px 4%;gap:4%;grid-template-columns:1.15fr 1fr}h2{font-size:6vw}.section-label{font-size:8px;letter-spacing:.25em;margin-bottom:23px}.story-copy{font-size:16px}.next-help{padding-left:8%}h3{font-size:17px}li{font-size:16px;padding-left:20px}ul{gap:6px}.wide-break{display:none}.closing-note{font-size:16px;gap:12px}.connect-block>p{font-size:16px}.connect-cta{min-width:190px}}
+@media(max-width:700px){.next-section{padding:20px 5% 35px}.next-panel{grid-template-columns:1fr;gap:28px;padding:30px 7% 27px}.section-label{font-size:8px;letter-spacing:.25em;margin-bottom:23px}h2{font-size:clamp(40px,10vw,64px);margin-bottom:21px}.story-copy{font-size:16px;line-height:1.5}.story-copy p{margin-bottom:20px}.wide-break{display:none}.next-help{border-left:0;padding:21px 0 0;border-top:1px solid #d8dde4}h3{font-size:17px;margin-bottom:14px}li{font-size:16px;padding-left:20px}ul{gap:7px}li:before{width:6px;height:6px}.connect-block{margin-top:24px}.connect-block>p{font-size:16px}.blue-rule{margin-bottom:15px}.connect-cta{display:flex;width:100%;justify-content:center;min-width:0}.cta-label{margin-left:auto}.cta-spark{position:absolute;left:19px}.cta-arrow{margin-left:auto}.closing-note{font-size:16px;gap:13px;margin-top:23px}}
 @media(prefers-reduced-motion:reduce){.connect-cta,.cta-arrow,.cta-arrow svg,.cta-spark{transition:none}}
 </style>

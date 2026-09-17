@@ -1,0 +1,165 @@
+{
+  "nav": {
+    "start": "Start",
+    "whatIDo": "Wat ik doe",
+    "workingOn": "Projecten",
+    "when": "Wanneer",
+    "why": "Waarom",
+    "tldr": "TL;DR",
+    "menu": "MENU",
+    "close": "SLUIT"
+  },
+  "hero": {
+    "eyebrow": "IDEEËN. SYSTEMEN. IMPACT.",
+    "title": "Digitale",
+    "titleEm": "Bouwer",
+    "tagline": "Technologie met een menselijke touch.",
+    "cta": "Scroll om te ontdekken"
+  },
+  "services": {
+    "label": "Wat ik doe",
+    "title": "Puur",
+    "titleLine2": "Polymatisme.",
+    "intro1": "Geen hokjes, wel resultaat. Ik bouw digitale ervaringen die techniek en creativiteit samenbrengen.",
+    "intro2": "Ik geloof dat de beste oplossingen ontstaan waar disciplines samenkomen.",
+    "items": {
+      "automation": { "title": "Automatisering", "caption": "Systemen\ndie voor je\nwerken." },
+      "software": { "title": "Development", "caption": "Bouwen\nwat nog niet\nbestaat." },
+      "ai": { "title": "AI\nEngineering", "caption": "Intelligentie\nin echte\noplossingen." },
+      "music": { "title": "Sound\nDesign", "caption": "Emotie\nin elke\nfrequentie." },
+      "threeD": { "title": "3D", "caption": "Ruimte creëren\nwaar die\nniet was." },
+      "writing": { "title": "Schrijven", "caption": "De juiste\nwoorden\nvinden." },
+      "design": { "title": "Design", "caption": "Functie\nontmoet\nesthetiek." },
+      "strategy": { "title": "Strategie", "caption": "Van chaos\nnaar\nkoers." },
+      "product": { "title": "Producten", "caption": "Van niets\nnaar\niets." }
+    }
+  },
+  "projects": {
+    "label": "Wat me bezighoudt",
+    "title": "Actieve",
+    "titleLine2": "projecten",
+    "summary": "Hier werk ik aan in het lab.",
+    "captions": {
+      "left": "Vanuit passie.\nVoor resultaat.",
+      "right": "Complexiteit versimpelen.\nSimpelheid perfectioneren."
+    },
+    "items": {
+      "aitje": {
+        "name": "AITJE",
+        "category": "Neem regie over AI",
+        "tagline": "AI zonder abonnementen,\nin jouw handen",
+        "details": "Lokale AI\nAutonomie\nAutomatisering",
+        "url": "https://aitje.com",
+        "visitBtn": "Bezoek AITJE",
+        "intro": "AITJE is de partner in AI voor het Nederlandse MKB. Wij helpen organisaties AI invoeren, veilig gebruiken en beter benutten. De klant is eigenaar van zijn hardware en van wat wij opleveren.",
+        "servicesTitle": "Wat AITJE doet",
+        "services": [
+          { "title": "Kijken", "desc": "Wij lopen met een organisatie door haar werk en wijzen aan waar AI iets kan overnemen, versnellen of goedkoper maken." },
+          { "title": "Invoeren", "desc": "Installatie, inrichting, koppeling met bestaande systemen en de begeleiding om ermee te leren werken." },
+          { "title": "Verbeteren", "desc": "Kennisbanken inrichten, promptbibliotheken opzetten, workflows automatiseren en de modelkeuze herzien." },
+          { "title": "Veilig houden", "desc": "Toetsen of het AI-gebruik voldoet aan de AVG en de Europese AI-verordening." },
+          { "title": "Blijven", "desc": "Na oplevering krijgt de klant de code, de configuratie en de documentatie in eigendom. Wij verkopen geen afhankelijkheid." }
+        ],
+        "productsTitle": "Producten",
+        "products": [
+          { "title": "Assistent", "desc": "Kennis, documenten en interne vragen. Gevoelige dossiers blijven binnen." },
+          { "title": "Coder", "desc": "Coding agents op eigen hardware. Geen kosten per gebruik en geen limiet." },
+          { "title": "Manager", "desc": "Persoonlijke agent die taken uitvoert. Werk dat blijft liggen gebeurt vanzelf." },
+          { "title": "Notulist", "desc": "Opnemen, samenvatten, doorzetten. Het verslag staat meteen in het eigen systeem." }
+        ]
+      },
+      "media": {
+        "name": "Zschot\nMedia",
+        "category": "Originele digitale ervaringen",
+        "tagline": "Applicaties die\nje leven verrijken",
+        "details": "Idee\nCode\nLancering",
+        "url": "https://zschotmedia.nl",
+        "visitBtn": "Bezoek Zschot Media",
+        "intro": "Een full-service digitaal bureau dat eigen apps bouwt en klanten helpt hun ideeën te realiseren. Design, development en strategie onder één dak.",
+        "servicesTitle": "Wat wij doen",
+        "services": [
+          { "title": "Concept", "desc": "Van vaag idee naar helder plan. Wij denken mee vanaf het begin." },
+          { "title": "Design", "desc": "Branding, UI/UX en visuele identiteit die blijft hangen." },
+          { "title": "Development", "desc": "Web en mobile apps gebouwd met moderne technologie." },
+          { "title": "Strategie", "desc": "De juiste keuzes maken voor groei en impact." },
+          { "title": "Content", "desc": "Video, fotografie en copy die je verhaal vertelt." }
+        ],
+        "productsTitle": "Eigen producten",
+        "products": [
+          { "title": "AllergieID", "desc": "Allergieën veilig delen met je omgeving.", "url": "https://allergieid.nl" },
+          { "title": "Kenmi", "desc": "Ken jezelf, begrijp anderen.", "url": "https://getkenmi.com" },
+          { "title": "BeurtAlert", "desc": "Nooit meer je beurt missen.", "url": "https://beurtalert.nl" },
+          { "title": "Spel6", "desc": "Dagelijks woordspel.", "url": "https://spel6.nl" },
+          { "title": "SpotAndFind", "desc": "Vind wat je zoekt.", "url": "https://spotandfind.nl" },
+          { "title": "Plus1Mee", "desc": "Samen naar events.", "url": "https://plus1mee.nl" },
+          { "title": "Ga Helder Verder", "desc": "Helderheid in je leven.", "url": "https://gahelderverder.nl" }
+        ]
+      },
+      "creative": {
+        "name": "Creatieve\nUitingen",
+        "category": "De brug tussen analoog en digitaal",
+        "tagline": "Ideeën verkennen\nvoorbij het voor de hand liggende",
+        "details": "Design\nExperimenten\nWat volgt",
+        "intro": "De ruimte waar ik experimenteer zonder deadline of klant. Muziek, kunst, schrijven en alles daartussenin.",
+        "disciplinesTitle": "Wat ik maak",
+        "disciplines": [
+          { "title": "Muziek", "desc": "Componeren, produceren en sound design. Geluid als expressie." },
+          { "title": "Digitale Juwelen", "desc": "Waar technologie en vakmanschap samenkomen." },
+          { "title": "Schrijven", "desc": "Verhalen en ideeën op papier. Fictie, non-fictie en alles ertussenin." },
+          { "title": "Kunst", "desc": "Visuele experimenten zonder doel. Maken om te maken." }
+        ]
+      }
+    },
+    "modal": {
+      "more": "Meer over dit project",
+      "discuss": "Project bespreken",
+      "visit": "Bezoek project of neem contact op"
+    }
+  },
+  "nextStep": {
+    "label": "Wanneer kom ik in beeld",
+    "title": "Altijd op zoek",
+    "titleLine2": "naar de volgende stap",
+    "story1": "Mijn kracht zit in de breedte en de bereidheid om diep te gaan waar het telt.",
+    "story2": "Denk je na over de digitale toekomst van je bedrijf, het praktisch toepassen van AI, het verbeteren van je content, het verkennen van nieuwe ideeën, of zoek je gewoon iemand die de technische uitdagingen uit handen neemt? Ik hoor graag van je.",
+    "helpTitle": "Hoe ik kan helpen",
+    "helpItems": [
+      "Je bedrijf digitaliseren",
+      "AI praktisch toepassen",
+      "Software en productrealisatie",
+      "Creative branding & inhoud",
+      "Virale applicaties",
+      "Strategisch sparren over de toekomst",
+      "Vage ideeën omzetten in heldere plannen",
+      "Werken met een engineer die er middenin zit"
+    ],
+    "connectIntro": "Open voor samenwerkingen, gesprekken en interessante ideeën.",
+    "closingNote": "Van gedachte naar werkelijkheid."
+  },
+  "finalNotes": {
+    "brand": "TL;DR",
+    "kicker": "Samengevat",
+    "prose1": "Mijn naam is Jeffrey. Ik ben een digitale bouwer. Polymatisme, 3D, muziek, automatisering, hardware, software, AI. Ik ben thuis in vele domeinen. Ik maak graag technologie die je leven verbetert.",
+    "prose2": "Bouw je iets ambitieus, verken je AI, werk je aan je digitale aanwezigheid of zoek je iemand om mee te denken? Ik maak graag kennis.",
+    "whatIDo": "Wat ik doe",
+    "whatIDoItems": [
+      "Software & AI",
+      "Creatieve systemen",
+      "Content & strategie",
+      "Digitale producten",
+      "Automatisering",
+      "Merk & design"
+    ],
+    "connect": "Neem contact op"
+  },
+  "why": {
+    "label": "Mijn drijfveer",
+    "title": "Waarom ik doe",
+    "titleLine2": "wat ik doe.",
+    "story": "Het digitale speelveld is mijn domein. Hier komen techniek en creativiteit samen, zonder grenzen. Ik bouw wat er nog niet is en maak vanuit nieuwsgierigheid een bruikbare oplossing. Software, Design, Automatisering, AI, het medium maakt niet uit, het resultaat wel."
+  },
+  "footer": {
+    "tagline": "Blijf nieuwsgierig.",
+    "backToTop": "Naar boven"
+  }
+}

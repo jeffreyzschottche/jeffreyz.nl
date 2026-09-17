@@ -1,24 +1,24 @@
 <script setup lang="ts">
+const { locale, setLocale } = useI18n()
 const isOpen = ref(false)
-const currentLang = ref<'nl' | 'en'>('nl')
 const toggle = () => { isOpen.value = !isOpen.value }
-const selectLang = (lang: 'nl' | 'en') => { currentLang.value = lang; isOpen.value = false }
+const selectLang = (lang: 'nl' | 'en') => { setLocale(lang); isOpen.value = false }
 </script>
 <template>
   <div class="lang-toggle" :class="{ open: isOpen }">
     <button class="lang-current" @click="toggle">
-      <span v-if="currentLang === 'nl'" class="flag">🇳🇱</span>
+      <span v-if="locale === 'nl'" class="flag">🇳🇱</span>
       <span v-else class="flag">🇬🇧</span>
       <svg class="chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
     </button>
     <div v-if="isOpen" class="lang-dropdown">
-      <button @click="selectLang('nl')" :class="{ active: currentLang === 'nl' }">
+      <button @click="selectLang('nl')" :class="{ active: locale === 'nl' }">
         <span class="flag">🇳🇱</span> Nederlands
-        <svg v-if="currentLang === 'nl'" class="check" viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>
+        <svg v-if="locale === 'nl'" class="check" viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>
       </button>
-      <button @click="selectLang('en')" :class="{ active: currentLang === 'en' }">
+      <button @click="selectLang('en')" :class="{ active: locale === 'en' }">
         <span class="flag">🇬🇧</span> English
-        <svg v-if="currentLang === 'en'" class="check" viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>
+        <svg v-if="locale === 'en'" class="check" viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>
       </button>
     </div>
   </div>

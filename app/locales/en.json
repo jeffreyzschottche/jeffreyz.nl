@@ -1,0 +1,192 @@
+{
+  "nav": {
+    "start": "Start",
+    "whatIDo": "What I Do",
+    "workingOn": "Projects",
+    "when": "When",
+    "why": "Why",
+    "tldr": "TL;DR",
+    "menu": "MENU",
+    "close": "CLOSE"
+  },
+  "hero": {
+    "eyebrow": "IDEAS. SYSTEMS. IMPACT.",
+    "title": "Digital",
+    "titleEm": "Builder",
+    "tagline": "Technology with a human touch.",
+    "cta": "Scroll to discover"
+  },
+  "services": {
+    "label": "What I Do",
+    "title": "Pure",
+    "titleLine2": "Polymatism.",
+    "intro1": "No boxes, just results. I build digital experiences that bring technology and creativity together.",
+    "intro2": "I believe that the best solutions emerge where disciplines intersect.",
+    "items": {
+      "automation": {
+        "title": "Automation",
+        "caption": "Systems\nthat work\nfor you."
+      },
+      "software": {
+        "title": "Development",
+        "caption": "Building\nwhat does not yet\nexist."
+      },
+      "ai": {
+        "title": "AI\nEngineering",
+        "caption": "Intelligence\nin real\nsolutions."
+      },
+      "music": {
+        "title": "Sound\nDesign",
+        "caption": "Emotion\nin every\nfrequency."
+      },
+      "threeD": {
+        "title": "3D",
+        "caption": "Creating space\nwhere there\nwas none."
+      },
+      "writing": {
+        "title": "Writing",
+        "caption": "Finding the right\nwords."
+      },
+      "design": {
+        "title": "Design",
+        "caption": "Function\nmeets\naesthetics."
+      },
+      "strategy": {
+        "title": "Strategy",
+        "caption": "From chaos\nto\ndirection."
+      },
+      "product": {
+        "title": "Products",
+        "caption": "From nothing\nto\nsomething."
+      }
+    }
+  },
+  "projects": {
+    "label": "What's on my mind",
+    "title": "Active",
+    "titleLine2": "projects",
+    "summary": "This is what I'm working on in the lab.",
+    "captions": {
+      "left": "Driven by passion.\nFor results.",
+      "right": "Simplifying complexity.\nPerfecting simplicity."
+    },
+    "items": {
+      "aitje": {
+        "name": "AITJE",
+        "category": "Take Control of AI",
+        "tagline": "AI without subscriptions,\nright at your fingertips",
+        "details": "Local AI\nAutonomy\nAutomation",
+        "url": "https://aitje.com",
+        "visitBtn": "Visit AITJE",
+        "intro": "AITJE is the AI partner for Dutch small and medium-sized businesses. We help organizations implement AI, use it securely, and get more out of it. The customer owns their hardware and everything we deliver.",
+        "servicesTitle": "What AITJE Does",
+        "services": [
+          { "title": "Assess", "desc": "We walk through your operations and identify where AI can take over, speed up, or reduce costs." },
+          { "title": "Implement", "desc": "Installation, configuration, integration with existing systems, and training on how to use them." },
+          { "title": "Improve", "desc": "Set up knowledge bases, create prompt libraries, automate workflows, and review model choices." },
+          { "title": "Secure", "desc": "Assess whether your AI usage complies with GDPR and the European AI Act." },
+          { "title": "Support", "desc": "Upon delivery, the customer owns the code, configuration, and documentation. We don't sell dependency." }
+        ],
+        "productsTitle": "Products",
+        "products": [
+          { "title": "Assistant", "desc": "Knowledge, documents, and internal questions. Sensitive files stay internal." },
+          { "title": "Coder", "desc": "Coding agents on your own hardware. No usage fees and no limits." },
+          { "title": "Manager", "desc": "Personal agent that executes tasks. Work that piles up gets done automatically." },
+          { "title": "Notulist", "desc": "Record, summarize, forward. Reports land directly in your own system." }
+        ]
+      },
+      "media": {
+        "name": "Zschot\nMedia",
+        "category": "Original Digital Experiences",
+        "tagline": "Apps that\nenrich your life",
+        "details": "Idea\nCode\nLaunch",
+        "url": "https://zschotmedia.nl",
+        "visitBtn": "Visit Zschot Media",
+        "intro": "A full-service digital agency that builds its own apps and helps clients bring their ideas to life. Design, development, and strategy—all under one roof.",
+        "servicesTitle": "What We Do",
+        "services": [
+          { "title": "Concept", "desc": "From a vague idea to a clear plan. We're there from the start." },
+          { "title": "Design", "desc": "Branding, UI/UX, and visual identity that sticks." },
+          { "title": "Development", "desc": "Web and mobile apps built with modern technology." },
+          { "title": "Strategy", "desc": "Making the right choices for growth and impact." },
+          { "title": "Content", "desc": "Video, photography, and copy that tell your story." }
+        ],
+        "productsTitle": "Our Products",
+        "products": [
+          { "title": "AllergieID", "desc": "Safely share your allergies with others.", "url": "https://allergieid.nl" },
+          { "title": "Kenmi", "desc": "Know yourself, understand others.", "url": "https://getkenmi.com" },
+          { "title": "BeurtAlert", "desc": "Never miss your turn again.", "url": "https://beurtalert.nl" },
+          { "title": "Spel6", "desc": "Daily word game.", "url": "https://spel6.nl" },
+          { "title": "SpotAndFind", "desc": "Find what you're looking for.", "url": "https://spotandfind.nl" },
+          { "title": "Plus1Mee", "desc": "Go to events together.", "url": "https://plus1mee.nl" },
+          { "title": "Ga Helder Verder", "desc": "Clarity in your life.", "url": "https://gahelderverder.nl" }
+        ]
+      },
+      "creative": {
+        "name": "Creative\nEndeavors",
+        "category": "The Bridge Between Analog and Digital",
+        "tagline": "Exploring Ideas\nBeyond the Obvious",
+        "details": "Design\nExperiments\nWhat's Next",
+        "intro": "The space where I experiment without deadlines or clients. Music, art, writing, and everything in between.",
+        "disciplinesTitle": "What I Create",
+        "disciplines": [
+          { "title": "Music", "desc": "Composing, producing, and sound design. Sound as expression." },
+          { "title": "Digital Jewelry", "desc": "Where technology and craftsmanship meet." },
+          { "title": "Writing", "desc": "Stories and ideas on paper. Fiction, non-fiction, and everything in between." },
+          { "title": "Art", "desc": "Visual experiments without purpose. Creating for the sake of creating." }
+        ]
+      }
+    },
+    "modal": {
+      "more": "More about this project",
+      "discuss": "Discuss the project",
+      "visit": "Visit project or get in touch"
+    }
+  },
+  "nextStep": {
+    "label": "When I come into play",
+    "title": "Always on the lookout",
+    "titleLine2": "to the next step",
+    "story1": "My strength lies in my breadth of knowledge and my willingness to delve deeply where it matters most.",
+    "story2": "Are you thinking about your company’s digital future, the practical application of AI, improving your content, exploring new ideas, or are you simply looking for someone to handle the technical challenges for you? I’d love to hear from you.",
+    "helpTitle": "How I Can Help",
+    "helpItems": [
+      "Digitizing Your Business",
+      "Practical Applications of AI",
+      "Software and Product Development",
+      "Creative Branding & Content",
+      "Viral Applications",
+      "Strategic Brainstorming About the Future",
+      "Turning Vague Ideas into Clear Plans",
+      "Working with an engineer who's right in the thick of it"
+    ],
+    "connectIntro": "Open to collaborations, discussions, and interesting ideas.",
+    "closingNote": "From idea to reality."
+  },
+  "finalNotes": {
+    "brand": "TL;DR",
+    "kicker": "In summary",
+    "prose1": "My name is Jeffrey. I'm a digital builder. I'm a polymath 3D, music, automation, hardware, software, AI. I'm at home in many fields. I love creating technology that improves your life.",
+    "prose2": "Are you working on an ambitious project, exploring AI, building your digital presence, or looking for someone to brainstorm with? I’d love to get to know you.",
+    "whatIDo": "What I Do",
+    "whatIDoItems": [
+      "Software & AI",
+      "Creative Systems",
+      "Content & Strategy",
+      "Digital Products",
+      "Automation",
+      "Brand & Design"
+    ],
+    "connect": "Get in touch"
+  },
+  "why": {
+    "label": "My Motivation",
+    "title": "Why I do",
+    "titleLine2": "what I do.",
+    "story": "The digital playing field is my domain. This is where technology and creativity come together, without limits. I build what doesn't exist yet and, driven by curiosity, create practical solutions. Software, design, automation, AI the medium doesn't matter; the result does."
+  },
+  "footer": {
+    "tagline": "Stay curious.",
+    "backToTop": "Back to top"
+  }
+}

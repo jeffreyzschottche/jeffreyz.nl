@@ -14,6 +14,7 @@ defineProps<{ service: { title: string; kind: string; caption: string }; index: 
 <style scoped>
 .service-card{position:relative;isolation:isolate;aspect-ratio:1.16;overflow:hidden;background:radial-gradient(ellipse at 70% 30%,#f5f4f0,#e5e4e0);color:#080909;border-left:1px solid #bdbdb633;border-bottom:1px solid #bdbdb655;container-type:inline-size}
 .is-dark{background:#080909;color:#fff}
+.service-card:is(.automation,.ai,.design,.product){background:radial-gradient(ellipse at 70% 30%,#f4f4f4,#e4e4e4);color:#080808;border-color:#bdbdbd55}
 .card-number{position:absolute;top:6%;left:6%;font-size:10px;z-index:4}
 .card-copy{position:absolute;bottom:6%;left:7%;z-index:3;pointer-events:none}
 h3{font-size:clamp(16px,8cqw,30px);font-weight:700;line-height:.94;letter-spacing:-.04em;text-transform:uppercase;white-space:pre-line;margin:0 0 12px}
