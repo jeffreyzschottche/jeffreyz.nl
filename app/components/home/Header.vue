@@ -83,7 +83,7 @@ onMounted(() => {
 .mobile-nav a span{font-size:18px;opacity:.6}
 .mobile-nav a.active{color:#ff3333}
 .mobile-nav a.active span{color:white}
-.mobile-nav-cta{display:block;margin-top:20px;background:#ff3333;color:white;text-align:center;padding:14px;border-radius:30px;font-size:13px;font-weight:600;letter-spacing:.05em}
+.mobile-nav a.mobile-nav-cta{display:flex;justify-content:center;border:0;margin-top:20px;background:#ff3333;color:white;text-align:center;padding:14px 14px 14px calc(14px + .05em);border-radius:30px;font-size:13px;font-weight:600;letter-spacing:.05em}
 
 @media(max-width:1100px){.nav-pill{gap:4px;padding:5px}.desktop-nav a{padding:10px 12px;font-size:13px}.desktop-nav a.active{padding-left:20px}.header-cta{padding:10px 16px}}
 @media(max-width:900px){
