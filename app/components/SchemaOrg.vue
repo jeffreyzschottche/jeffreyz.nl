@@ -10,9 +10,9 @@ const structuredData = {
       givenName: 'Jeffrey',
       familyName: 'Zschot',
       url: 'https://jeffreyz.nl',
-      email: 'jeffreyzschot@gmail.com',
+      email: 'jeffrey@zschotmedia.nl',
       image: 'https://jeffreyz.nl/images/image-jz.png',
-      description: 'Digital builder uit Amsterdam. Expertise in software development, AI engineering, automation, content creation en creative direction.',
+      description: 'Digital builder uit Amsterdam. Design, software, AI, muziek en digitale ervaringen.',
       jobTitle: 'Digital Builder',
       worksFor: [
         {
@@ -71,12 +71,7 @@ const structuredData = {
       name: 'Jeffrey Zschot - Digital Builder',
       description: 'Portfolio en persoonlijke website van Jeffrey Zschot, digital builder uit Amsterdam.',
       publisher: { '@id': 'https://jeffreyz.nl/#person' },
-      inLanguage: ['nl', 'en'],
-      potentialAction: {
-        '@type': 'SearchAction',
-        target: 'https://jeffreyz.nl/?q={search_term_string}',
-        'query-input': 'required name=search_term_string'
-      }
+      inLanguage: ['nl', 'en']
     },
     // WebPage Schema
     {
@@ -86,10 +81,10 @@ const structuredData = {
       name: 'Jeffrey Zschot - Digital Builder | Amsterdam',
       isPartOf: { '@id': 'https://jeffreyz.nl/#website' },
       about: { '@id': 'https://jeffreyz.nl/#person' },
-      description: 'Jeffrey Zschot is een digital builder uit Amsterdam. Expertise in software development, AI engineering, automation, content creation en creative direction.',
+      description: 'Jeffrey Zschot is een digital builder uit Amsterdam. Design, software, AI, muziek en digitale ervaringen.',
       inLanguage: ['nl', 'en'],
       datePublished: '2024-01-01',
-      dateModified: '2026-09-14'
+      dateModified: '2026-11-01'
     },
     // LocalBusiness / ProfessionalService Schema
     {
@@ -97,8 +92,8 @@ const structuredData = {
       '@id': 'https://jeffreyz.nl/#business',
       name: 'Jeffrey Zschot - Digital Builder',
       url: 'https://jeffreyz.nl',
-      email: 'jeffreyzschot@gmail.com',
-      description: 'Digital builder services: software development, AI engineering, automation, content creation, creative direction.',
+      email: 'jeffrey@zschotmedia.nl',
+      description: 'Digital builder: design, software development, AI engineering, automation, muziek en creative direction.',
       image: 'https://jeffreyz.nl/images/image-jz.png',
       founder: { '@id': 'https://jeffreyz.nl/#person' },
       address: {

@@ -11,7 +11,7 @@ const socials = [
   { label: 'LinkedIn', icon: 'simple-icons:linkedin', href: 'https://www.linkedin.com/in/jeffrey-zschöttche-71aa95151' },
   { label: 'Zschot Media', href: 'https://zschotmedia.nl' },
   { label: 'AITJE.com', href: 'https://aitje.com' },
-  { label: 'Mail me', icon: 'simple-icons:gmail', href: 'mailto:jeffreyzschot@gmail.com' },
+  { label: 'Mail me', icon: 'simple-icons:gmail', href: 'mailto:jeffrey@zschotmedia.nl' },
 ]
 let media: gsap.MatchMedia | undefined
 onMounted(() => {

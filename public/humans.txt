@@ -2,7 +2,7 @@
 Developer & Designer: Jeffrey Zschot
 Role: Digital Builder
 Location: Amsterdam, Noord-Holland, Netherlands
-Contact: jeffreyzschot@gmail.com
+Contact: jeffrey@zschotmedia.nl
 Website: https://jeffreyz.nl
 
 /* THANKS */

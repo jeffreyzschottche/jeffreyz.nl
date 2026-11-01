@@ -4,9 +4,8 @@ import nl from '~/locales/nl.json'
 type Locale = 'nl' | 'en'
 type Translations = typeof en
 
-const currentLocale = ref<Locale>('nl')
-
 export const useI18n = () => {
+  const currentLocale = useState<Locale>('locale', () => 'nl')
   const locales: Record<Locale, Translations> = { en, nl }
 
   const t = (key: string): string | string[] => {

@@ -1,47 +1,260 @@
 <script setup lang="ts">
-import { gsap } from 'gsap'
-const { t } = useI18n()
-const hero = ref<HTMLElement>()
-let context: gsap.Context | undefined
-let media: gsap.MatchMedia | undefined
-onMounted(() => {
-  if (!hero.value) return
-  const root = hero.value
-  context = gsap.context(() => {
-    media = gsap.matchMedia()
-    media.add('(prefers-reduced-motion: no-preference)', () => {
-      gsap.from('.hero-copy > *', { y: 25, autoAlpha: 0, duration: 1, stagger: .12, ease: 'power3.out', delay: .15 })
-      gsap.from('.portrait', { y: 65, opacity: 0, duration: 1.5, ease: 'power3.out' })
-      gsap.from('.float-layer', { opacity: 0, duration: 1.2, stagger: .035, ease: 'power2.out' })
-      const layers = gsap.utils.toArray<HTMLElement>('.float-layer')
-      layers.forEach((layer, index) => gsap.to(layer, { y: index % 2 ? 9 : -12, duration: 3 + index % 4, repeat: -1, yoyo: true, ease: 'sine.inOut', delay: index * .12 }))
-      const setters = layers.map(layer => ({ x: gsap.quickTo(layer, 'x', { duration: 1.5, ease: 'power3.out' }), depth: Number(layer.dataset.depth || 1) }))
-      const move = (event: PointerEvent) => {
-        if (event.pointerType !== 'mouse') return
-        const bounds = root.getBoundingClientRect()
-        const offset = ((event.clientX - bounds.left) / bounds.width - .5) * 25
-        setters.forEach(layer => layer.x(offset * layer.depth))
-      }
-      const reset = () => setters.forEach(layer => layer.x(0))
-      root.addEventListener('pointermove', move)
-      root.addEventListener('pointerleave', reset)
-      return () => { root.removeEventListener('pointermove', move); root.removeEventListener('pointerleave', reset) }
-    })
-  }, root)
-})
-onBeforeUnmount(() => { media?.revert(); context?.revert() })
+import { portfolioCopy } from "~/data/portfolio";
+import type { PortfolioPanel } from "~/data/portfolio";
+defineProps<{ paused: boolean }>();
+const emit = defineEmits<{ navigate: [panel: PortfolioPanel] }>();
+const { locale } = useI18n();
+const copy = computed(() => portfolioCopy[locale.value]);
 </script>
 <template>
-  <section id="home" ref="hero" class="hero" aria-labelledby="hero-heading">
-    <div class="blue-field" />
-    <HomeHeader />
-    <HomeCollage />
-    <div class="hero-copy"><span class="eyebrow"><span /> {{ t('hero.eyebrow') }}</span><h1 id="hero-heading">{{ t('hero.title') }}<br><em>{{ t('hero.titleEm') }}</em><sup>✦</sup></h1><p>{{ t('hero.tagline') }}</p><a href="#about" class="hero-cta">{{ t('hero.cta') }} <span>↓</span></a><HomeSocialLinks /></div>
+  <section
+    id="home"
+    class="hero"
+    :class="{ 'is-paused': paused }"
+    aria-labelledby="hero-heading"
+  >
+    <div class="hero-intro">
+      <div class="hero-heading">
+        <p class="eyebrow">
+          JEFFREY ZSCHÖTTCHE <span aria-hidden="true">/</span> AMSTERDAM
+        </p>
+        <h1 id="hero-heading">
+          Digital<br />builder<span class="period">.</span
+          ><span class="creative-spark" aria-hidden="true">✳</span>
+        </h1>
+      </div>
+      <div class="hero-description">
+        <p class="intro-kicker">{{ copy.kicker }}</p>
+        <p>{{ copy.intro }}</p>
+        <a href="#contact" @click.prevent="emit('navigate', 'contact')"
+          >{{ copy.letsMake }} <span aria-hidden="true">↗</span></a
+        >
+      </div>
+    </div>
+    <HomeSilhouetteReel :paused="paused" />
   </section>
 </template>
 <style scoped>
-.hero{position:relative;height:100vh;height:100dvh;isolation:isolate;background:#faf9f5;overflow:hidden}.blue-field{position:absolute;inset:0 51% 0 0;background:radial-gradient(ellipse at 85% 95%,#b4caff 0%,#7494ff 15%,transparent 46%),radial-gradient(ellipse at 70% 25%,#1255ff,transparent 65%),linear-gradient(135deg,#142bce,#003dff 65%,#3e69ff)}.hero-copy{position:absolute;z-index:12;left:6.3%;top:30%;color:white;text-align:center}.eyebrow{display:flex;align-items:center;justify-content:center;gap:9px;font-size:7px;letter-spacing:.2em;margin-bottom:25px}.eyebrow>span{width:5px;height:5px;background:#bdcaff;border-radius:50%}h1{position:relative;font-size:clamp(48px,6vw,96px);font-weight:700;line-height:.99;letter-spacing:-.05em;margin:0}h1 em{font-style:normal;font-weight:700}h1 sup{position:absolute;font-size:27px;font-weight:400;right:-29px;bottom:30px;letter-spacing:0}.hero-copy p{font-size:18px;font-weight:400;letter-spacing:-.02em;margin:24px 0 27px;color:#e2e8ff}.hero-cta{display:flex;width:218px;margin:0 auto;align-items:center;justify-content:space-between;padding:7px 7px 7px 22px;border:1px solid #a9c4ff;border-radius:50px;font-size:12px;transition:background .2s,box-shadow .2s}.hero-cta:hover{background:#ffffff1a;box-shadow:0 0 25px #9dc5ff33}.hero-cta>span{display:grid;place-items:center;width:37px;height:37px;background:#ffffff19;border-radius:50%;font-size:23px}.hero-copy :deep(.social-links){margin-top:31px}.hero-note{position:absolute;left:6.3%;bottom:6%;z-index:12;color:white;font-size:7px;line-height:2.2;letter-spacing:.4em}.little-rule{display:block;width:35px;height:1px;background:#b3c8ff;margin-bottom:15px}.edition{position:absolute;z-index:11;bottom:3%;left:40%;font-size:6px;letter-spacing:.28em;color:#e5ebff}.scroll-cue{position:absolute;right:5.5%;bottom:5%;z-index:12;display:flex;align-items:center;gap:19px;font-size:7px;letter-spacing:.22em}.scroll-cue svg{width:18px;height:24px}@media(max-width:1100px){.hero-copy{left:5.5%}.hero-copy h1{font-size:6vw}.eyebrow{font-size:6px}.hero-cta{width:195px}.hero-copy p{font-size:16px}}@media(max-width:650px){.blue-field{right:0;background:radial-gradient(ellipse at 0 40%,#7294ff,transparent 30%),linear-gradient(135deg,#123ddf,#0a43f1 45%,#163edf 75%,#244aed)}.hero-copy{top:auto;bottom:max(9%,calc(env(safe-area-inset-bottom) + 36px));left:8%;width:76%}.hero-copy .eyebrow{display:none}.hero-copy h1{font-size:clamp(40px,10vw,64px);line-height:.98;letter-spacing:-.045em;width:fit-content}.hero-copy h1 sup{font-size:20px;right:-27px;bottom:17px}.hero-copy p{margin:clamp(7px,1.6dvh,14px) 0 clamp(10px,2.3dvh,20px);font-size:16px}.hero-cta{width:200px;padding:5px 5px 5px 19px;font-size:11px}.hero-cta>span{width:31px;height:31px;font-size:22px}.hero-copy :deep(.social-links){margin-top:clamp(12px,2.7dvh,23px);gap:23px}.hero-copy :deep(.social-links svg){width:18px;height:18px}.hero-note,.edition{display:none}.scroll-cue{color:white;bottom:max(3%,env(safe-area-inset-bottom));left:8%;right:auto;gap:14px;font-size:6px}}@media(max-height:600px) and (min-width:651px){.hero-copy{top:23%}.eyebrow{margin-bottom:12px}.hero-copy p{margin:12px 0 16px}.hero-copy :deep(.social-links){margin-top:16px}.hero-note{display:none}}
- </style>
-<style scoped>
-.hero-copy h1 sup{color:#f6b51f}
+.hero {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+}
+.hero-intro {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 48px;
+  padding: 18px 0 35px;
+}
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.13em;
+  margin: 0 0 23px;
+  color: #a6a6a0;
+}
+.eyebrow span {
+  margin-inline: 10px;
+  color: #555;
+}
+h1 {
+  position: relative;
+  width: fit-content;
+  margin: 0;
+  font-size: clamp(76px, 8.6vw, 142px);
+  font-weight: 500;
+  line-height: 0.85;
+  letter-spacing: -0.075em;
+}
+.period {
+  color: #c5f33c;
+}
+.creative-spark {
+  position: absolute;
+  top: 4px;
+  right: -0.73em;
+  font-size: 0.47em;
+  line-height: 1;
+  color: #c5f33c;
+  animation: spark-turn 24s linear infinite;
+}
+.hero-description {
+  width: 270px;
+  flex-shrink: 0;
+  padding-bottom: 5px;
+  color: #a6a6a0;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.hero-description .intro-kicker {
+  margin: 0 0 13px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #f4f3ef;
+}
+.hero-description p {
+  margin: 0 0 23px;
+}
+.hero-description > a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: fit-content;
+  padding-bottom: 7px;
+  border-bottom: 1px solid #575752;
+  color: #f4f3ef;
+  font-size: 12px;
+}
+.hero-description > a:hover {
+  border-color: #c5f33c;
+  color: #c5f33c;
+}
+.hero-description > a span {
+  font-size: 19px;
+}
+@keyframes spark-turn {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.is-paused .creative-spark {
+  animation-play-state: paused;
+}
+@media (min-height: 900px) and (min-width: 701px) {
+  .hero-intro {
+    padding-top: 32px;
+    padding-bottom: 45px;
+  }
+  h1 {
+    font-size: clamp(100px, 9.5vw, 156px);
+  }
+}
+@media (max-width: 1000px) {
+  .hero-description {
+    width: 230px;
+    font-size: 13px;
+  }
+  .hero-intro {
+    gap: 32px;
+  }
+  .hero-description .intro-kicker {
+    font-size: 12px;
+  }
+  h1 {
+    font-size: clamp(78px, 10vw, 110px);
+  }
+}
+@media (max-width: 700px) {
+  .hero-intro {
+    align-items: flex-start;
+    gap: 22px;
+    padding: 10px 0 28px;
+  }
+  h1 {
+    font-size: clamp(68px, 12vw, 100px);
+  }
+  .eyebrow {
+    font-size: 8px;
+    letter-spacing: 0.08em;
+    margin-bottom: 19px;
+  }
+  .eyebrow span {
+    margin-inline: 5px;
+  }
+  .hero-description {
+    width: 180px;
+    padding-top: 31px;
+    font-size: 12px;
+  }
+  .hero-description .intro-kicker {
+    font-size: 11px;
+    margin-bottom: 10px;
+  }
+  .hero-description p {
+    margin-bottom: 15px;
+  }
+  .hero-description > a {
+    font-size: 11px;
+  }
+}
+@media (max-width: 500px) {
+  .hero-intro {
+    display: block;
+    padding-top: 9px;
+    padding-bottom: 25px;
+  }
+  .eyebrow {
+    margin-bottom: 20px;
+    font-size: 8px;
+  }
+  h1 {
+    font-size: clamp(75px, 20vw, 99px);
+    line-height: 0.84;
+  }
+  .creative-spark {
+    top: 6px;
+    right: -0.78em;
+    font-size: 0.44em;
+  }
+  .hero-description {
+    width: auto;
+    padding-top: 22px;
+    font-size: 12px;
+    line-height: 1.65;
+  }
+  .hero-description .intro-kicker {
+    display: none;
+  }
+  .hero-description p {
+    max-width: 310px;
+    margin-bottom: 11px;
+  }
+  .hero-description > a {
+    font-size: 11px;
+    padding-bottom: 4px;
+  }
+}
+@media (max-height: 740px) and (min-width: 701px) {
+  .hero-intro {
+    padding-block: 8px 25px;
+  }
+  h1 {
+    font-size: clamp(76px, 7.5vw, 105px);
+  }
+  .eyebrow {
+    margin-bottom: 17px;
+  }
+  .hero-description {
+    font-size: 12px;
+  }
+  .hero-description p {
+    margin-bottom: 13px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .creative-spark {
+    animation: none;
+  }
+}
+@media (max-width: 500px) {
+  .hero-intro {
+    padding-bottom: 18px;
+  }
+  .eyebrow {
+    margin-bottom: 14px;
+  }
+  h1 {
+    font-size: clamp(66px, 18.5vw, 92px);
+  }
+  .hero-description {
+    padding-top: 16px;
+  }
+  .hero-description p {
+    margin-bottom: 8px;
+  }
+}
 </style>

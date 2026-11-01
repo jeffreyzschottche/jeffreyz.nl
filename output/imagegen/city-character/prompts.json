@@ -1,0 +1,40 @@
+{
+  "mode": "Built-in image_gen",
+  "prompts": [
+    {
+      "id": "clean-sky",
+      "transparent": false,
+      "refs": [
+        "/Users/jeffreyzschottche/Sites/jeffreyz.nl/output/imagegen/silhouettes/loops/city.png"
+      ],
+      "prompt": "Use case: precise-object-edit. Edit the supplied yellow-and-black city silhouette illustration. Remove ONLY the small walking person on the central flat rooftop, around x232–281,y195–294 on the 480x480 reference. Replace the person with the matching yellow sky, keeping the flat BLACK rooftop edge at y294 exactly intact. Preserve ALL buildings, cables, antennas, giant black sun, foreground building, every edge, every color and exact framing. No ladder, no new person, no glow, no new objects. Same square canvas. This is a clean background layer for compositing an animated version of that SAME person."
+    },
+    {
+      "id": "walk",
+      "transparent": true,
+      "refs": [
+        "/Users/jeffreyzschottche/Sites/jeffreyz.nl/output/imagegen/city-character/character-reference.png",
+        "/Users/jeffreyzschottche/Sites/jeffreyz.nl/output/imagegen/silhouettes/loops/city.png"
+      ],
+      "prompt": "Use case: stylized-concept. Production character-animation sprite sheet derived from the supplied reference character, NOT a new character design. Image 1 is the precise character identity/shape reference. Image 2 is the scene/style reference only.\nMake EXACTLY EIGHT sequential WALK-CYCLE poses in a precise FOUR COLUMN by TWO ROW grid, equally sized portrait cells, reading order. Overall canvas landscape 3:2, suggested 2048x1360. TRUE TRANSPARENT background, NO colored background, no floor, no rooftop, no ground line, no shadow, no gutters, no frame borders, no numbers, no text.\nSubject: the SAME slim young adult man as reference, in profile FACING LEFT, short low softly fuzzy cropped hair, hoodie with hood DOWN, fitted straight trousers, low sneakers, simple rounded backpack on his back. PURE FLAT SOLID BLACK FEATURELESS SILHOUETTE, no outlines, no shading, no skin or face details, no colored highlights. Match the reference head shape, narrow proportions, backpack and understated streetwear. This man will be only 90 pixels tall in the city, so use readable clean shapes.\nAnimation: 1 left foot reaches forward contact, 2 left leg bears weight right leg lifts, 3 passing pose right knee passes left, 4 right leg swings forward, 5 right foot forward contact left foot back, 6 right leg bears weight left leg lifts, 7 passing pose left knee passes right, 8 left leg swings forward, back to first. Arms swing subtly opposite legs, backpack stays attached and stable. The pose of arms AND legs must actually change between frames. NO duplicated poses.\nFraming: same exact side camera, identical body bone lengths and scale in all eight cells; head top at 12% cell height, soles baseline at 92% cell height; entire figure centered horizontally inside each cell, walking IN PLACE facing LEFT. Keep clear transparent margins around every limb and foot. Every frame fully contains its figure. Eight separate complete bodies, no overlapping cells. It must be a technically usable walk animation sprite sheet."
+    },
+    {
+      "id": "climb",
+      "transparent": true,
+      "refs": [
+        "/Users/jeffreyzschottche/Sites/jeffreyz.nl/output/imagegen/city-character/character-reference.png",
+        "/Users/jeffreyzschottche/Sites/jeffreyz.nl/output/imagegen/silhouettes/loops/city.png"
+      ],
+      "prompt": "Use case: stylized-concept. Production animation sprite sheet of the SAME character from image 1; image 2 supplies the graphic style. Create EXACTLY EIGHT sequential poses of a man CLIMBING DOWN a building, in an exact FOUR COLUMN by TWO ROW evenly sized grid, reading order. Overall landscape 3:2. True TRANSPARENT background. No building, wall, ledge, ladder, ground, floor, shadows, gutters, labels or cell borders.\nIdentity/style: SAME slim young adult male, short LOW FUZZY cropped hair (no quiff), hoodie hood DOWN, narrow trousers, sneakers, same simple rounded backpack. PURE SOLID BLACK FEATURELESS SILHOUETTE, with no outlines, no shading, no face details, no highlights. Preserve the reference proportions and backpack.\nCamera: orthographic SIDE VIEW, man FACING RIGHT toward an invisible wall to the right of each cell. His body hangs outside that wall: both hands raised to grip invisible brick holds to his right, knees bent and feet bracing against the invisible wall on the right. Natural downward climbing, not a walking gait and not a standing man. Full body and both hands visible.\nEight DIFFERENT anatomical action frames of controlled descending: left hand reaches down while right arm holds high; left hand grips lower hold; right knee bends and right foot searches lower; right foot plants; right hand releases and reaches down; right hand grips lower; left knee bends and left foot searches lower; left foot plants, cycling. Alternate bent elbows, reaching arms and bent knees/feet clearly. Each frame must have clearly changed limb poses. The character stays in place; website code moves him down.\nRegistration: same exact camera, identical body and head scale and stable hip position across all eight cells, with head around 33% cell height, hands reaching up to around 10%, hips around 55%, lower foot no lower than 94%. Center every figure in its cell with margin, don't clip any hands or feet. Every cell portrait proportions. Eight individual whole silhouettes ready for a looping climb sprite animation."
+    },
+    {
+      "id": "ledge",
+      "transparent": true,
+      "refs": [
+        "/Users/jeffreyzschottche/Sites/jeffreyz.nl/output/imagegen/city-character/character-reference.png",
+        "/Users/jeffreyzschottche/Sites/jeffreyz.nl/output/imagegen/silhouettes/loops/city.png"
+      ],
+      "prompt": "Use case: stylized-concept. Four-frame character animation sprite sheet matching image 1 exactly, image 2 is style only. EXACTLY FOUR different poses in an exact TWO COLUMN by TWO ROW equal-cell grid, on TRUE TRANSPARENT BACKGROUND. No ledge, building, line, floor, shadows, text, labels, borders or colored backdrop.\nThe SAME slim black silhouette man with short LOW FUZZY hair, hoodie hood down, sneakers and rounded backpack is moving from WALKING LEFT on a roof to CLIMBING DOWN its LEFT edge. Keep his exact character identity, proportions and all-black featureless flat silhouette style.\nReading-order poses:\n1: facing LEFT, he stops at the edge and crouches, knees deeply bent, torso leans forward, both hands reach down toward an imaginary ledge just in front of his toes.\n2: he plants both hands on that imaginary edge, torso leans far forward, turns his body to face the wall to his RIGHT, one foot swings over the edge; a clearly distinct transitional pose.\n3: now on the outside of the wall, both hands grip the imaginary ledge overhead on his RIGHT, torso lowered below hand level, knees bent, feet braced to the RIGHT; he hangs facing RIGHT.\n4: fully in descending stance facing RIGHT, one hand lower than the other, bent knees, a foot searching for a lower hold, still wearing the backpack.\nSame head size, torso size and limb lengths across all four panels. Do NOT scale up the crouched body to fill its cell; it should naturally occupy less vertical height. Each complete figure must fit its cell with transparent margin and not touch other frames. Distinct real whole-body action poses, no duplicate poses. Pure BLACK silhouettes only, no outlines or highlights."
+    }
+  ]
+}

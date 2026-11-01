@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   css: ['~/assets/css/main.css'],
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   modules: ['@nuxtjs/tailwindcss', '@nuxt/icon', '@nuxtjs/sitemap'],
 
   site: {
@@ -24,7 +24,7 @@ export default defineNuxtConfig({
         { name: 'description', content: 'Jeffrey Zschot is een digital builder uit Amsterdam. Expertise in software development, AI engineering, automation, content creation en creative direction.' },
         { name: 'author', content: 'Jeffrey Zschot' },
         { name: 'robots', content: 'index, follow' },
-        { name: 'theme-color', content: '#1a3fe0' },
+        { name: 'theme-color', content: '#080808' },
 
         // Geo meta tags
         { name: 'geo.region', content: 'NL-NH' },
