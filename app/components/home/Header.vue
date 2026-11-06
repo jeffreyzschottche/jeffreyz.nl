@@ -12,6 +12,7 @@ const links = computed(() => [
 <template>
   <header class="site-header">
     <a class="logo" href="#home" aria-label="Jeffreyz — home" @click.prevent="emit('navigate', 'home')">jeffreyz<span>©</span></a>
+    <slot name="socials" />
     <nav class="nav-pill" :aria-label="locale === 'nl' ? 'Hoofdnavigatie' : 'Main navigation'">
       <a v-for="link in links" :key="link.id" :href="link.href" :class="{ active: active === link.id }" :aria-current="active === link.id ? 'page' : undefined" @click.prevent="emit('navigate', link.id)">{{ link.label }}</a>
       <a class="nav-contact" href="#contact" @click.prevent="emit('navigate', 'contact')">Let’s talk <span aria-hidden="true">↗</span></a>
@@ -24,4 +25,5 @@ const links = computed(() => [
 @media(max-width:500px){.site-header{align-items:flex-start;flex-wrap:wrap;padding-block:22px 20px;gap:21px}.logo{font-size:33px}.nav-pill{margin-left:auto}.nav-pill a{min-height:34px;padding-inline:12px;font-size:11px}.nav-pill .nav-contact{gap:10px;padding-inline:12px}.nav-contact span{font-size:18px}}
 @media(max-width:450px){.site-header{gap:20px}.nav-pill{width:100%;justify-content:space-between}.nav-pill a{flex:1}.nav-pill .nav-contact{flex:1.3}}
 @media(max-width:500px){.site-header{padding-block:20px 12px;gap:14px}.nav-pill a{white-space:nowrap}.nav-pill .nav-contact{gap:8px}}
+@media(max-width:700px){.site-header{display:grid;grid-template-columns:1fr auto;align-items:center}.nav-pill{grid-column:1/-1;width:100%;justify-content:space-between}.nav-pill a{flex:1;white-space:nowrap}.nav-pill .nav-contact{flex:1.3}}
 </style>
